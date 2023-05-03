@@ -1,0 +1,9 @@
+#include "game.h"
+
+USERINPUT getUserInput() {
+  new_user_input = 0;
+  while (!new_user_input) {}
+  USERINPUT user_input = new_user_input;
+  new_user_input  = 0;
+  return user_input;
+}

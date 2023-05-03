@@ -1,0 +1,44 @@
+quartus_bdf_data
+(symbol
+	(rect 896 672 1048 784)
+	(text "wb_hexTo7segAll" (rect 5 0 88 12)(font "Arial" ))
+	(text "inst2" (rect 7 99 30 111)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "hex[15..0]" (rect 0 0 49 12)(font "Arial" ))
+		(text "hex[15..0]" (rect 21 27 70 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 152 32)
+		(output)
+		(text "seg3[6..0]" (rect 0 0 49 12)(font "Arial" ))
+		(text "seg3[6..0]" (rect 82 27 131 39)(font "Arial" ))
+		(line (pt 152 32)(pt 136 32)(line_width 3))
+	)
+	(port
+		(pt 152 48)
+		(output)
+		(text "seg2[6..0]" (rect 0 0 49 12)(font "Arial" ))
+		(text "seg2[6..0]" (rect 82 43 131 55)(font "Arial" ))
+		(line (pt 152 48)(pt 136 48)(line_width 3))
+	)
+	(port
+		(pt 152 64)
+		(output)
+		(text "seg1[6..0]" (rect 0 0 49 12)(font "Arial" ))
+		(text "seg1[6..0]" (rect 82 59 131 71)(font "Arial" ))
+		(line (pt 152 64)(pt 136 64)(line_width 3))
+	)
+	(port
+		(pt 152 80)
+		(output)
+		(text "seg0[6..0]" (rect 0 0 49 12)(font "Arial" ))
+		(text "seg0[6..0]" (rect 82 75 131 87)(font "Arial" ))
+		(line (pt 152 80)(pt 136 80)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 136 97))
+	)
+)

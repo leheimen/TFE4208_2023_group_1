@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 3.1.0?>
+
+<ManagedProjectBuildInfo>
+<project id="BasicIFsoftware.nios2.exec.463005482" name="Nios II Executable" projectType="nios2.exec">
+<configuration artifactExtension="elf" artifactName="BasicIFsoftware" cleanCommand="rm -rf" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GASErrorParser" id="nios2.exec.debug.1178660940" name="Debug" parent="nios2.exec.debug">
+<toolChain id="com.altera.nj.ui.exe.Debug.1985394439" name="com.altera.nj.ui.exe.Debug" superClass="com.altera.nj.ui.exe.Debug">
+<tool id="com.altera.nj.ui.tool.compiler.exe.debug.131385722" name="Nios II Compiler" superClass="com.altera.nj.ui.tool.compiler.exe.debug"/>
+<tool id="com.altera.nj.ui.tool.linker.exe.debug.1568564808" name="Linker" superClass="com.altera.nj.ui.tool.linker.exe.debug"/>
+<macros/>
+</toolChain>
+</configuration>
+<configuration artifactExtension="elf" artifactName="BasicIFsoftware" cleanCommand="rm -rf" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GASErrorParser" id="nios2.exec.release.771855338" name="Release" parent="nios2.exec.release">
+<toolChain id="com.altera.nj.ui.exe.Release.2077113385" name="com.altera.nj.ui.exe.Release" superClass="com.altera.nj.ui.exe.Release">
+<tool id="com.altera.nj.ui.tool.compiler.exe.release.2070778347" name="Nios II Compiler" superClass="com.altera.nj.ui.tool.compiler.exe.release">
+<option id="nios2.compiler.debugging.level.1489762822" superClass="nios2.compiler.debugging.level" value="nios2.debugging.level.none" valueType="enumerated"/>
+</tool>
+<tool id="com.altera.nj.ui.tool.linker.exe.release.479686064" name="Linker" superClass="com.altera.nj.ui.tool.linker.exe.release"/>
+<macros expandEnvironmentMacros="true"/>
+</toolChain>
+</configuration>
+<macros/>
+</project>
+</ManagedProjectBuildInfo>

@@ -1,0 +1,87 @@
+
+#include "alt_types.h"
+#include "altera_avalon_pio_regs.h"
+#include "sys/alt_irq.h"
+#include "system.h"
+#include <stdio.h>
+#include <unistd.h>
+
+#include "lcd.h"
+#include "btnLed.h"
+
+/* Seven Segment Display PIO Functions
+ * sevenseg_set_hex() --  implements a hex digit map.
+ */
+
+#ifdef SEVEN_SEG_PIO_BASE
+static void sevenseg_set_hex(int hex)
+{
+    IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG_PIO_BASE, hex);
+}
+#endif
+
+
+static void handle_button_press(FILE *lcd)
+{
+	switch (edge_capture)
+	{
+	// Button 1
+	case 0x1:
+		sevenseg_set_hex(1);
+		LCD_PRINTF(lcd, "%c%s%c%s Button 1\n", ESC, ESC_CLEAR_ALL, ESC, ESC_COL2_INDENT5);
+		IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0x1);
+		break;
+	// Button 2
+	case 0x2:
+		sevenseg_set_hex(2);
+		LCD_PRINTF(lcd, "%c%s%c%s Button 2\n", ESC, ESC_CLEAR_ALL, ESC, ESC_COL1_INDENT5);
+		IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0x4);
+		break;
+	// Button 3
+	case 0x4:
+		sevenseg_set_hex(3);
+		LCD_PRINTF(lcd, "%c%s%c%s Button 3\n", ESC, ESC_CLEAR_ALL, ESC, ESC_COL2_INDENT5);
+		IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0x10);
+		break;
+	// Button
+	case 0x8:
+		sevenseg_set_hex(4);
+		LCD_PRINTF(lcd, "%c%s%c%s Button 4\n", ESC, ESC_CLEAR_ALL, ESC, ESC_COL1_INDENT5);
+		IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0x40);
+		break;
+
+	default:
+		printf("Error: edge_capture UNKNOWN!");
+		break;
+	}
+}
+
+int main(void)
+{
+    //int  __attribute__ ((unused))  wait_time;  // Attribute suppresses "var set but not used" warning.
+    FILE * lcd;
+
+    // Initialize the LCD, if there is one.
+    lcd = LCD_OPEN();
+    if(lcd == NULL) {
+    	printf("Error: lcd not found!");
+    }
+
+    // Initialize the button pio.
+	#ifdef BUTTON_PIO_BASE
+    btnLed_init();
+	#endif
+
+    while( 1 )
+    {
+    	if (edge_capture != 0) {
+    		printf("Edge capture: %x\n", edge_capture);
+			handle_button_press(lcd);
+		}
+    	edge_capture = 0;
+		usleep(100000); // Sleep for 0.1s.
+    }
+    LCD_CLOSE(lcd);
+
+    return 0;
+}

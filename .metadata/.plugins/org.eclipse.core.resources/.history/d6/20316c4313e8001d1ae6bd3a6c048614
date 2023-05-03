@@ -1,0 +1,28 @@
+#ifndef FSM_H
+#define FSM_H
+
+void fsm();
+
+void fsm_mainMenu() {
+  page_display(main_menu);
+  USERINPUT input = getUserInput();
+  switch(input) {
+    case BTN_WHITE_UP:
+      page_scroll(main_menu, BTN_WHITE_UP);
+      break;
+    case BTN_YELLOW_DOWN:
+      page_scroll(main_menu, BTN_YELLOW_DOWN);
+      break;
+    case BTN_GREEN_ENTER:
+      state = main_menu.items[main_menu.lcd_line0_index].enter_state;
+      break;
+  }
+}
+
+void fsm_game();
+
+void fsm_settings();
+
+void fsm_highscores();
+
+#endif /* FSM_H */

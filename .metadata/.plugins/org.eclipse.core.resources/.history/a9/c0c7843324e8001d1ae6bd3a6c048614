@@ -1,0 +1,47 @@
+
+#include "alt_types.h"
+#include "altera_avalon_pio_regs.h"
+#include "sys/alt_irq.h"
+#include "system.h"
+#include <stdio.h>
+#include <unistd.h>
+
+#include "lcd.h"
+#include "btnLed.h"
+#include "game.h"
+//#include "fsm.h"
+
+int main(void) {
+	// Inititalize the lcd
+	lcd = LCD_OPEN();
+	if(lcd == NULL) {
+		printf("Error: lcd not found!");
+	}
+
+    // Initialize the button pio.
+	#ifdef BUTTON_PIO_BASE
+    btnLed_init();
+	#endif
+
+    game_init();
+
+
+    while(1) {
+    	//fsm();
+
+    	/*
+    	USERINPUT input = game_getUserInput();
+    	printf("New user input: %d \n", input);
+    	*/
+    	USERINPUT input = game_getUserInput();
+    	LCD_PRINTF(lcd, "%c%s\n", ESC, ESC_CLEAR_ALL);
+    	input = game_getUserInput();
+    	LCD_PRINTF(lcd, "%c%s>helloooen\n", ESC, ESC_ROW1_COL1);
+
+		usleep(100000); // Sleep for 0.1s.
+
+    }
+    LCD_CLOSE(lcd);
+
+    return 0;
+}

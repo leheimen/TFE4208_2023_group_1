@@ -1,0 +1,21 @@
+#ifndef GAME_H
+#define GAME_H
+
+
+#include <stdio.h>
+#include "sys/alt_irq.h"
+#include "system.h"
+#include "alt_types.h"
+#include "altera_avalon_pio_regs.h"
+#include "btnLed.h"
+
+extern volatile int edge_capture;
+int correct_sequence[100]; // Assume that user will not manage >100 tasks
+int correct_sequence_len;
+int user_sequence_len;
+
+typedef enum {BTN_WHITE_UP = 1, BTN_YELLOW_DOWN, BTN_RED_BACK, BTN_GREEN_ENTER} USERINPUT;
+
+USERINPUT game_getUserInput();
+
+#endif /* GAME_H */

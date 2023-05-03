@@ -1,0 +1,6 @@
+08:46:36 **** Clean-only build of configuration Nios II for project momory_game_bsp ****
+make clean 
+[BSP clean complete]
+
+08:46:36 Build Finished (took 685ms)
+

@@ -1,0 +1,9 @@
+11:29:23 **** Incremental Build of configuration Nios II for project hei_verden ****
+make all 
+Info: Building ../hei_verden_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hei_verden_bsp/
+[BSP build complete]
+[hei_verden build complete]
+
+11:29:24 Build Finished (took 967ms)
+

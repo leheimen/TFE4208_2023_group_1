@@ -1,0 +1,19 @@
+#ifndef BTNLED_H
+#define BTNLED_H
+
+
+#include <stdio.h>
+#include "sys/alt_irq.h"
+#include "system.h"
+#include "alt_types.h"
+#include "altera_avalon_pio_regs.h"
+
+/* A variable to hold the value of the button pio edge capture register. */
+volatile int edge_capture;
+
+/* Initialize the button_pio. */
+void init_button_pio();
+
+void printNum();
+
+#endif /* BTNLED_H */

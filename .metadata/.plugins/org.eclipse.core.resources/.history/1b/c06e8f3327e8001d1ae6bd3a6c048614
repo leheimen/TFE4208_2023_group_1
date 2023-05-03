@@ -1,0 +1,11 @@
+#ifndef HIGHSCORE_H
+#define HIGHSCORE_H
+
+#include "menu.h"
+
+int highscoresUpdate(int new_score);
+
+void highscoresDisplay();
+
+
+#endif /* HIGHSCORE_H */

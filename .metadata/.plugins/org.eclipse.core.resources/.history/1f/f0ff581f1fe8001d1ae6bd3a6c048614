@@ -1,0 +1,26 @@
+#include "game.h"
+
+USERINPUT game_getUserInput() {
+  edge_capture  = 0;
+  while (!edge_capture) {}
+  USERINPUT user_input;
+  switch (edge_capture) {
+	  case 0x1:
+		  user_input = BTN_WHITE_UP;
+		  break;
+	  case 0x2:
+		  user_input = BTN_YELLOW_DOWN;
+		  break;
+	  case 0x4:
+		  user_input = BTN_RED_BACK;
+		  break;
+	  case 0x8:
+		  user_input = BTN_GREEN_ENTER;
+		  break;
+	  default:
+		  printf( "Error: Button press UNKNOWN!!\n");
+  }
+  edge_capture  = 0;
+  return user_input;
+}
+

@@ -1,0 +1,138 @@
+#include "game.h"
+
+USERINPUT game_getUserInput() {
+  edge_capture  = 0;
+  while (!edge_capture) {}
+  USERINPUT user_input;
+  switch (edge_capture) {
+	  case 0x1:
+		  user_input = BTN_WHITE_UP;
+		  break;
+	  case 0x2:
+		  user_input = BTN_YELLOW_DOWN;
+		  break;
+	  case 0x4:
+		  user_input = BTN_RED_BACK;
+		  break;
+	  case 0x8:
+		  user_input = BTN_GREEN_ENTER;
+		  break;
+	  default:
+		  printf( "Error: Button press UNKNOWN!!\n");
+  }
+  edge_capture  = 0;
+  return user_input;
+}
+
+void game_init() {
+  correct_sequence_len = 0;
+  user_sequence_len = 0;
+  game_displayGameStart();
+}
+
+bool game_isEndOfSequence() {
+  if (user_sequence_len == correct_sequence_len) {
+    //tone(PIN_BUZZER, 1000, 100);
+    user_sequence_len = 0;
+    return true;
+  } else {
+    return false;
+  }
+}
+
+bool game_isCorrectInput(USERINPUT input) {
+  return (input == correct_sequence[user_sequence_len-1]);
+}
+
+void game_appendNewTask() {
+  correct_sequence_len++;
+  int task = 2;
+  correct_sequence[correct_sequence_len-1] = task;
+}
+
+void game_over() {
+  int new_highscore = highscoresUpdate(correct_sequence_len-1);
+  game_displayGameOver(new_highscore);
+  game_getUserInput(); // push any button to continue
+  state = MAIN_MENU;
+}
+
+void game_displayCorrectSequence() {
+  LCD_PRINTF(lcd, "%c%s\n", ESC, ESC_CLEAR_ALL);
+  LCD_PRINTF(lcd, "%c%sRemember the\n", ESC, ESC_ROW1_COL1);
+  LCD_PRINTF(lcd, "sequence:\n");
+  for (int i = 0; i < correct_sequence_len; i++) {
+     int task = correct_sequence[i];
+     switch (task) {
+      case BTN_WHITE_UP:
+        IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0x40);
+    	break;
+      case BTN_YELLOW_DOWN:
+    	IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0x10);
+        break;
+      case BTN_RED_BACK:
+	    IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0x08);
+        break;
+      case BTN_GREEN_ENTER:
+    	IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0x01);
+        break;
+     }
+     usleep(500000);
+     IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0x00);
+     usleep(500000);
+  }
+  LCD_PRINTF(lcd, "%c%s\n", ESC, ESC_CLEAR_ALL);
+  LCD_PRINTF(lcd, "%c%sEnter the\n", ESC, ESC_ROW1_COL1);
+  LCD_PRINTF(lcd, "sequence:\n");
+}
+
+void game_displayGameStart() {
+  lcd.clear();
+  lcd.print("**Memory Game**");
+  for (int i = 0; i < 10; i++) {
+      delay(50);
+      digitalWrite(PIN_LED_WHITE_UP,  HIGH);
+      delay(50);
+      digitalWrite(PIN_LED_WHITE_UP,    LOW);
+      digitalWrite(PIN_LED_YELLOW_DOWN, HIGH);
+      delay(50);
+      digitalWrite(PIN_LED_YELLOW_DOWN, LOW);
+      digitalWrite(PIN_LED_RED_BACK,    HIGH);
+      delay(50);
+      digitalWrite(PIN_LED_RED_BACK,   LOW);
+      digitalWrite(PIN_LED_GREEN_ENTER, HIGH);
+      delay(50);
+      digitalWrite(PIN_LED_GREEN_ENTER, LOW);
+  }
+  lcd.clear();
+  lcd.print("Pay attention!");
+  delay(1000);
+  lcd.clear();
+  lcd.print("Remember the");
+  lcd.setCursor(0,1);
+  lcd.print("sequence:");
+  delay(1000);
+}
+
+void game_displayGameOver(int new_highscore) {
+  lcd.clear();
+  lcd.print("Game Over :(");
+  tone(PIN_BUZZER, 200, 1500);
+  for (int i = 0; i < 20; i++) {
+      delay(50);
+      digitalWrite(PIN_LED_RED_BACK,  HIGH);
+      delay(50);
+      digitalWrite(PIN_LED_RED_BACK,  LOW);
+  }
+  lcd.clear();
+  lcd.print("Score: ");
+  lcd.print(correct_sequence_len);
+
+  if (new_highscore) {
+    lcd.setCursor(0,1);
+    lcd.print("New highscore(");
+    lcd.print(new_highscore); // indicates the place in the highscore table
+    lcd.print(")");
+  }
+  // TODO: display "New highscore" if best ever, and "new top 5 entry" if top 3.
+}

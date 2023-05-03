@@ -1,0 +1,59 @@
+#include "menu.h"
+
+
+void page_display(struct page &p) {
+  lcd.clear();
+  lcd.print(">");
+  lcd.print(p.items[p.lcd_line0_index].name);
+  lcd.setCursor(0,1);
+  lcd.print(" ");
+  lcd.print(p.items[p.lcd_line1_index].name);
+}
+
+void page_scroll(struct page &p, USERINPUT up_down) {
+  if (up_down == BTN_WHITE_UP) {
+    p.lcd_line0_index = ((p.lcd_line0_index - 1) + p.item_cnt) % p.item_cnt;
+    p.lcd_line1_index = ((p.lcd_line1_index - 1) + p.item_cnt) % p.item_cnt;
+  } else if (up_down == BTN_YELLOW_DOWN) {
+    p.lcd_line0_index = (p.lcd_line0_index + 1) % p.item_cnt;
+    p.lcd_line1_index = (p.lcd_line1_index + 1) % p.item_cnt;
+  }
+  Serial.print("lcd_line0_index: ");
+  Serial.println(p.lcd_line0_index);
+  Serial.print("lcd_line1_index: ");
+  Serial.println(p.lcd_line1_index);
+}
+
+/*********************************************************
+ * MENU PAGES
+ *********************************************************/
+
+#define ITEM_CNT_MAIN_MENU 3
+#define ITEM_CNT_HIGHSCORES_MENU 5
+#define ITEM_CNT_SETTINGS_MENU 5
+
+const page_item main_menu_items[] = {
+   {"Play game", NULL, PLAY},
+   {"Settings",  NULL, SETTINGS},
+   {"Highscore", NULL, HIGHSCORES}
+};
+
+const page_item highscores_menu_items[] = {
+   {"Place 1: ", NULL, 0},
+   {"Place 2: ", NULL, 0},
+   {"Place 3: ", NULL, 0},
+   {"Place 4: ", NULL, 0},
+   {"Place 5: ", NULL, 0}
+};
+
+const page_item settings_menu_items[] = {
+   {"Difficulty",      NULL, 0},
+   {"Brightness",      NULL, 0},
+   {"Contrast",        NULL, 0},
+   {"Reset highscore", NULL, 0},
+   {"About",           NULL, 0}
+};
+
+page main_menu       = {ITEM_CNT_MAIN_MENU,       main_menu_items,       0, 1};
+page highscores_menu = {ITEM_CNT_HIGHSCORES_MENU, highscores_menu_items, 0, 1};
+page settings_menu   = {ITEM_CNT_SETTINGS_MENU,   settings_menu_items,   0, 1};

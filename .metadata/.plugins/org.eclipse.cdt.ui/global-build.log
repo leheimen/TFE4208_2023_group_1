@@ -1,0 +1,56 @@
+11:03:58 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling fsm.c to obj/default/fsm.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fsm.o fsm.c
+Info: Compiling game.c to obj/default/game.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/game.o game.c
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+11:04:08 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+11:04:09 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+11:05:55 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+menu.c: In function 'menu_about':
+menu.c:65:13: warning: implicit declaration of function 'game_getUserInput' [-Wimplicit-function-declaration]
+     input = game_getUserInput();
+             ^
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+11:05:58 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]

@@ -1,0 +1,41 @@
+
+#include "alt_types.h"
+#include "altera_avalon_pio_regs.h"
+#include "sys/alt_irq.h"
+#include "system.h"
+#include <stdio.h>
+#include <unistd.h>
+
+#include "lcd.h"
+#include "btnLed.h"
+#include "game.h"
+
+int main(void)
+{
+    //int  __attribute__ ((unused))  wait_time;  // Attribute suppresses "var set but not used" warning.
+    FILE * lcd;
+
+    // Initialize the LCD, if there is one.
+    lcd = LCD_OPEN();
+    if(lcd == NULL) {
+    	printf("Error: lcd not found!");
+    }
+
+    // Initialize the button pio.
+	#ifdef BUTTON_PIO_BASE
+    btnLed_init();
+	#endif
+
+    while( 1 )
+    {
+    	if (edge_capture != 0) {
+    		printf("Edge capture: %x\n", edge_capture);
+			handle_button_press(lcd);
+		}
+    	edge_capture = 0;
+		usleep(100000); // Sleep for 0.1s.
+    }
+    LCD_CLOSE(lcd);
+
+    return 0;
+}

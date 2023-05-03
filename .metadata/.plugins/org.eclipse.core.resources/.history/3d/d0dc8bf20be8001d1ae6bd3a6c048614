@@ -1,0 +1,18 @@
+#ifndef BTNLED_H
+#define BTNLED_H
+
+
+#include <stdio.h>
+#include "sys/alt_irq.h"
+#include "system.h"
+#include "alt_types.h"
+#include "altera_avalon_pio_regs.h"
+#include "btnLed.h"
+
+
+typedef enum USERINPUT {BTN_WHITE_UP = 1, BTN_YELLOW_DOWN, BTN_RED_BACK, BTN_GREEN_ENTER};
+volatile USERINPUT new_user_input;
+
+USERINPUT getUserInput();
+
+#endif /* BTNLED_H */

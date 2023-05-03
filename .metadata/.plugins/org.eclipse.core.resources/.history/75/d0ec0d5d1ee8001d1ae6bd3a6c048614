@@ -1,0 +1,22 @@
+#ifndef FSM_H
+#define FSM_H
+
+
+#include "stdbool.h"
+
+typedef enum {MAIN_MENU, PLAY, SETTINGS, HIGHSCORES} STATE;
+
+STATE state = MAIN_MENU;
+
+void fsm();
+
+static void fsm_mainMenu();
+
+static void fsm_game();
+
+static void fsm_settings();
+
+static void fsm_highscores();
+
+
+#endif /* FSM_H */

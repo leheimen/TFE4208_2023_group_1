@@ -1,0 +1,35 @@
+#ifndef MENU_H
+#define MENU_H
+
+#include <stddef.h>
+#include "lcd.h"
+#include "fsm.h"
+
+
+typedef struct {
+  char name[16];
+  void (*function)();
+  STATE enter_state;
+} page_item;
+
+typedef struct {
+  const int item_cnt;
+  page_item *items;
+  int lcd_line0_index;
+  int lcd_line1_index;
+} page;
+
+extern page_item main_menu_items[];
+extern page_item highscores_menu_items[];
+extern page_item settings_menu_items[];
+
+extern page main_menu;
+extern page highscores_menu;
+extern page settings_menu;
+
+void menu_displayPage(page p);
+
+void menu_scrollPage(page *p, USERINPUT up_down);
+
+
+#endif /* MENU_H */

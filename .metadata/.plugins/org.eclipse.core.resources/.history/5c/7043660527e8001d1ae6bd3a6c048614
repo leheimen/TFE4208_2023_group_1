@@ -1,0 +1,37 @@
+#ifndef HIGHSCORE_H
+#define HIGHSCORE_H
+
+int highscoresUpdate(int new_score) {
+  int i = 0;
+  for (i = 0; i < ITEM_CNT_HIGHSCORES_MENU; i++) {
+    int highscore_table_entry = EEPROM.read(EEPROM_ADDR_HIGHSCORES + i*sizeof(new_score));
+    if (new_score > highscore_table_entry) {
+      break;
+    }
+  }
+  if (i == ITEM_CNT_HIGHSCORES_MENU) { // No new highscore
+    return 0;
+  } else {                            // New highscore at place i+1
+    // Shift the lower highscores down
+    for (int k = ITEM_CNT_HIGHSCORES_MENU-1; k > i; k--) {
+      int replace_with_score = EEPROM.read(EEPROM_ADDR_HIGHSCORES + (k-1)*sizeof(new_score));
+      EEPROM.write(EEPROM_ADDR_HIGHSCORES + k*sizeof(new_score), replace_with_score);
+    }
+    // Write the new_score
+    EEPROM.write(EEPROM_ADDR_HIGHSCORES + i*sizeof(new_score), new_score);
+    return i+1;
+  }
+}
+
+void highscoresDisplay() {
+  lcd.setCursor(14,0);
+  int lcd_line0_score = EEPROM.read(EEPROM_ADDR_HIGHSCORES + highscores_menu.lcd_line0_index*sizeof(int));
+  lcd.print(lcd_line0_score);
+
+  lcd.setCursor(14,1);
+  int lcd_line1_score = EEPROM.read(EEPROM_ADDR_HIGHSCORES + highscores_menu.lcd_line1_index*sizeof(int));
+  lcd.print(lcd_line1_score);
+}
+
+
+#endif /* HIGHSCORE_H */

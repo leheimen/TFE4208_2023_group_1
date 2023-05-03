@@ -1,0 +1,9 @@
+#include "game.h"
+
+USERINPUT game_getUserInput() {
+  while (!edge_capture) {}
+  USERINPUT user_input = new_user_input;
+  edge_capture  = 0;
+  return user_input;
+}
+

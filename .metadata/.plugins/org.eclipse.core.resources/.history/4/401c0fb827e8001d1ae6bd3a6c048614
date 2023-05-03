@@ -1,0 +1,15 @@
+#include "highscore.h"
+
+int highscore_update(int new_score) {
+	return new_score % 3;
+}
+
+void highscore_display() {
+  lcd.setCursor(14,0);
+  int lcd_line0_score = EEPROM.read(EEPROM_ADDR_HIGHSCORES + highscores_menu.lcd_line0_index*sizeof(int));
+  lcd.print(lcd_line0_score);
+
+  lcd.setCursor(14,1);
+  int lcd_line1_score = EEPROM.read(EEPROM_ADDR_HIGHSCORES + highscores_menu.lcd_line1_index*sizeof(int));
+  lcd.print(lcd_line1_score);
+}

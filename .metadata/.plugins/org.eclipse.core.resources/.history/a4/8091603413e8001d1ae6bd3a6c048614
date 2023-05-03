@@ -1,0 +1,6 @@
+#ifndef FSM_H
+#define FSM_H
+
+void fsm();
+
+#endif /* FSM_H */

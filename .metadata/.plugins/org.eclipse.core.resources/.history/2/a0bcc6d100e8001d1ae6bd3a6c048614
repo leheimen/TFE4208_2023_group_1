@@ -1,0 +1,14 @@
+#ifndef BTNLED_H
+#define BTNLED_H
+
+/* A variable to hold the value of the button pio edge capture register. */
+volatile int edge_capture;
+
+/* Initialize the button_pio. */
+void init_button_pio();
+
+void printNum() {
+	printf("Number is 3\n");
+}
+
+#endif /* BTNLED_H */
