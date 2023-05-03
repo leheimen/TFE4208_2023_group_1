@@ -1,4 +1,85 @@
-11:03:58 **** Incremental Build of configuration Nios II for project memory_game ****
+12:49:13 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling fsm.c to obj/default/fsm.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fsm.o fsm.c
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+12:49:28 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+12:49:30 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+12:50:35 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:18:15: warning: variable 'input' set but not used [-Wunused-but-set-variable]
+     USERINPUT input;
+               ^
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+12:50:38 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+12:51:12 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:28:15: warning: variable 'input' set but not used [-Wunused-but-set-variable]
+     USERINPUT input;
+               ^
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+12:51:15 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+12:55:39 **** Build of configuration Nios II for project memory_game ****
 make all 
 Info: Building ../memory_game_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
@@ -7,48 +88,2114 @@ Info: Compiling fsm.c to obj/default/fsm.o
 nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fsm.o fsm.c
 Info: Compiling game.c to obj/default/game.o
 nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/game.o game.c
+game.c: In function 'game_isCorrectInput':
+game.c:46:17: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+   return (input == correct_sequence[user_sequence_len-1]);
+                 ^
+game.c: At top level:
+game.c:7:12: warning: 'difficulty' defined but not used [-Wunused-variable]
+ static int difficulty = HARD;
+            ^
+Info: Compiling highscore.c to obj/default/highscore.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/highscore.o highscore.c
+highscore.c: In function 'highscore_reset':
+highscore.c:36:2: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+  usleep(3000000);
+  ^
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
 Info: Compiling main.c to obj/default/main.o
 nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:28:15: warning: variable 'input' set but not used [-Wunused-but-set-variable]
+     USERINPUT input;
+               ^
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
 Info: Linking memory_game.elf
-nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
 nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
 Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
 Info:                   109 KBytes free for stack + heap.
 Info: Creating memory_game.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
 [memory_game build complete]
-11:04:08 **** Build of configuration Nios II for project memory_game ****
+12:55:42 **** Incremental Build of configuration Nios II for project memory_game ****
 make all 
 Info: Building ../memory_game_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
 [BSP build complete]
 [memory_game build complete]
-11:04:09 **** Incremental Build of configuration Nios II for project memory_game ****
+13:03:42 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:28:15: warning: variable 'input' set but not used [-Wunused-but-set-variable]
+     USERINPUT input;
+               ^
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:03:46 **** Incremental Build of configuration Nios II for project memory_game ****
 make all 
 Info: Building ../memory_game_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
 [BSP build complete]
 [memory_game build complete]
-11:05:55 **** Build of configuration Nios II for project memory_game ****
+13:04:34 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:28:15: warning: variable 'input' set but not used [-Wunused-but-set-variable]
+     USERINPUT input;
+               ^
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:04:37 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:12:54 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW1_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:12:57 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:14:11 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:14:13 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:14:48 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling fsm.c to obj/default/fsm.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fsm.o fsm.c
+Info: Compiling game.c to obj/default/game.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/game.o game.c
+game.c: In function 'game_isCorrectInput':
+game.c:46:17: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+   return (input == correct_sequence[user_sequence_len-1]);
+                 ^
+game.c: At top level:
+game.c:7:12: warning: 'difficulty' defined but not used [-Wunused-variable]
+ static int difficulty = HARD;
+            ^
+Info: Compiling highscore.c to obj/default/highscore.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/highscore.o highscore.c
+highscore.c: In function 'highscore_reset':
+highscore.c:36:2: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+  usleep(3000000);
+  ^
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW1_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:28:15: warning: variable 'input' set but not used [-Wunused-but-set-variable]
+     USERINPUT input;
+               ^
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:14:51 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:18:00 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW1_COL1, ESC_CLEAR_ALL, str);
+                         ^
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:28:15: warning: variable 'input' set but not used [-Wunused-but-set-variable]
+     USERINPUT input;
+               ^
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:18:03 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:19:23 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c\r%s", ESC, ESC_ROW1_COL1, ESC_CLEAR_ALL, str);
+                         ^
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:19:26 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:21:16 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:5:55: error: expected expression before ',' token
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_CLEAR_ALL, , ESC_ROW1_COL1, str);
+                                                       ^
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+make: *** [obj/default/lcd.o] Error 1
+13:21:18 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:5:55: error: expected expression before ',' token
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_CLEAR_ALL, , ESC_ROW1_COL1, str);
+                                                       ^
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+make: *** [obj/default/lcd.o] Error 1
+13:21:38 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_CLEAR_ALL, ESC_ROW1_COL1, str);
+                         ^
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:21:42 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:22:12 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_CLEAR_ALL, ESC, ESC_ROW1_COL1, str);
+                         ^
+lcd.c:5:25: warning: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Wformat=]
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:5:25: warning: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Wformat=]
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:22:15 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:22:51 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c\n%s", ESC, ESC_CLEAR_ALL, ESC, ESC_ROW1_COL1, str);
+                         ^
+lcd.c:5:25: warning: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Wformat=]
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:5:25: warning: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Wformat=]
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:22:54 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:24:35 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c\n%c%s", ESC, ESC_CLEAR_ALL, ESC, ESC_ROW1_COL1, str);
+                         ^
+lcd.c:5:25: warning: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Wformat=]
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:5:25: warning: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Wformat=]
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:24:38 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:25:47 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c\n%c%s\n", ESC, ESC_CLEAR_ALL, ESC, ESC_ROW1_COL1, str);
+                         ^
+lcd.c:5:25: warning: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Wformat=]
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:5:25: warning: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Wformat=]
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:25:50 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:27:33 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:5:25: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+         LCD_PRINTF(lcd, "%s%s%s%s%s", ESC, ESC_CLEAR_ALL, ESC, ESC_ROW1_COL1, str);
+                         ^
+lcd.c:5:25: warning: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Wformat=]
+lcd.c:5:25: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+lcd.c:5:25: warning: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Wformat=]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:27:36 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:35:51 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling fsm.c to obj/default/fsm.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fsm.o fsm.c
+Info: Compiling game.c to obj/default/game.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/game.o game.c
+game.c: In function 'game_isCorrectInput':
+game.c:46:17: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+   return (input == correct_sequence[user_sequence_len-1]);
+                 ^
+game.c: At top level:
+game.c:7:12: warning: 'difficulty' defined but not used [-Wunused-variable]
+ static int difficulty = HARD;
+            ^
+Info: Compiling highscore.c to obj/default/highscore.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/highscore.o highscore.c
+highscore.c: In function 'highscore_reset':
+highscore.c:36:2: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+  usleep(3000000);
+  ^
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:28:15: warning: variable 'input' set but not used [-Wunused-but-set-variable]
+     USERINPUT input;
+               ^
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:35:54 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:37:44 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:7:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:7:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:37:47 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:38:25 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:8:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:8:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:8:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:8:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:38:28 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:39:05 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:8:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:8:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:8:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:8:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:39:08 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:39:46 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:5:25: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+         LCD_PRINTF(lcd, "%s%s\n", ESC, ESC_CLEAR_ALL);
+                         ^
+lcd.c:5:25: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+lcd.c:6:25: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+         LCD_PRINTF(lcd, "%s%sPay attention!\n", ESC, ESC_ROW1_COL1);
+                         ^
+lcd.c:6:25: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+lcd.c:8:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:8:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:8:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:8:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:39:49 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:40:30 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c", ESC, ESC_CLEAR_ALL);
+                         ^
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:6:25: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+         LCD_PRINTF(lcd, "%s%sPay attention!\n", ESC, ESC_ROW1_COL1);
+                         ^
+lcd.c:6:25: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+lcd.c:8:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:8:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:8:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:8:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:40:33 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:40:56 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c\r", ESC, ESC_CLEAR_ALL);
+                         ^
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:6:25: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+         LCD_PRINTF(lcd, "%s%sPay attention!\n", ESC, ESC_ROW1_COL1);
+                         ^
+lcd.c:6:25: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+lcd.c:8:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:8:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:8:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:8:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:40:59 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:41:33 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c\n", ESC, ESC_CLEAR_ALL);
+                         ^
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:6:25: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+         LCD_PRINTF(lcd, "%s%sPay attention!\n", ESC, ESC_ROW1_COL1);
+                         ^
+lcd.c:6:25: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+lcd.c:8:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:8:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:8:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:8:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:41:36 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:42:11 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:6:25: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+         LCD_PRINTF(lcd, "%s%sPay attention!\n", ESC, ESC_ROW1_COL1);
+                         ^
+lcd.c:6:25: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+lcd.c:8:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:8:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:8:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:8:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:42:13 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:42:46 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:8:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:8:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:8:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:8:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:42:49 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:43:22 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:8:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:8:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:8:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:8:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:43:25 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:47:00 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:8:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c%c%s", ESC, ESC_ROW2_COL1, ESC_CLEAR, str);
+                         ^
+lcd.c:8:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:8:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:8:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:47:03 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:48:06 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:48:09 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:48:51 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:48:53 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:49:49 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:28:15: warning: variable 'input' set but not used [-Wunused-but-set-variable]
+     USERINPUT input;
+               ^
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:49:52 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:51:12 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling fsm.c to obj/default/fsm.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fsm.o fsm.c
+Info: Compiling game.c to obj/default/game.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/game.o game.c
+game.c: In function 'game_isCorrectInput':
+game.c:46:17: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+   return (input == correct_sequence[user_sequence_len-1]);
+                 ^
+game.c: At top level:
+game.c:7:12: warning: 'difficulty' defined but not used [-Wunused-variable]
+ static int difficulty = HARD;
+            ^
+Info: Compiling highscore.c to obj/default/highscore.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/highscore.o highscore.c
+highscore.c: In function 'highscore_reset':
+highscore.c:36:2: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+  usleep(3000000);
+  ^
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:28:15: warning: variable 'input' set but not used [-Wunused-but-set-variable]
+     USERINPUT input;
+               ^
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:51:16 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:52:39 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:28:15: warning: variable 'input' set but not used [-Wunused-but-set-variable]
+     USERINPUT input;
+               ^
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:52:42 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:54:16 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c[1;1H%c%s\r%s\n", ESC, ESC_ROW1_COL1, ESC, ESC_CLEAR, str);
+                         ^
+lcd.c:5:25: warning: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Wformat=]
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:5:25: warning: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Wformat=]
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:54:19 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:54:57 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+lcd.c: In function 'lcd_print':
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+         LCD_PRINTF(lcd, "%c[1;1H\n%c%s\r%s\n", ESC, ESC_ROW1_COL1, ESC, ESC_CLEAR, str);
+                         ^
+lcd.c:5:25: warning: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Wformat=]
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+lcd.c:5:25: warning: format '%c' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+lcd.c:5:25: warning: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Wformat=]
+lcd.c:5:25: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:54:59 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:55:21 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:55:24 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:56:24 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:56:27 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+13:59:15 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling fsm.c to obj/default/fsm.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fsm.o fsm.c
+Info: Compiling game.c to obj/default/game.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/game.o game.c
+game.c: In function 'game_isCorrectInput':
+game.c:46:17: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+   return (input == correct_sequence[user_sequence_len-1]);
+                 ^
+game.c: At top level:
+game.c:7:12: warning: 'difficulty' defined but not used [-Wunused-variable]
+ static int difficulty = HARD;
+            ^
+Info: Compiling highscore.c to obj/default/highscore.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/highscore.o highscore.c
+highscore.c: In function 'highscore_reset':
+highscore.c:36:2: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+  usleep(3000000);
+  ^
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:28:15: warning: variable 'input' set but not used [-Wunused-but-set-variable]
+     USERINPUT input;
+               ^
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+13:59:19 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+14:00:06 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+14:00:07 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+14:02:04 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+14:02:07 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+14:02:48 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling fsm.c to obj/default/fsm.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fsm.o fsm.c
+Info: Compiling game.c to obj/default/game.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/game.o game.c
+game.c: In function 'game_isCorrectInput':
+game.c:46:17: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+   return (input == correct_sequence[user_sequence_len-1]);
+                 ^
+game.c: At top level:
+game.c:7:12: warning: 'difficulty' defined but not used [-Wunused-variable]
+ static int difficulty = HARD;
+            ^
+Info: Compiling highscore.c to obj/default/highscore.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/highscore.o highscore.c
+highscore.c: In function 'highscore_reset':
+highscore.c:36:2: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+  usleep(3000000);
+  ^
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:28:15: warning: variable 'input' set but not used [-Wunused-but-set-variable]
+     USERINPUT input;
+               ^
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+14:02:52 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+14:03:53 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:28:15: warning: variable 'input' set but not used [-Wunused-but-set-variable]
+     USERINPUT input;
+               ^
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+14:03:55 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+14:06:00 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+14:06:03 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+14:10:36 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling fsm.c to obj/default/fsm.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fsm.o fsm.c
+Info: Compiling game.c to obj/default/game.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/game.o game.c
+game.c: In function 'game_isCorrectInput':
+game.c:46:17: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+   return (input == correct_sequence[user_sequence_len-1]);
+                 ^
+game.c: At top level:
+game.c:7:12: warning: 'difficulty' defined but not used [-Wunused-variable]
+ static int difficulty = HARD;
+            ^
+Info: Compiling highscore.c to obj/default/highscore.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/highscore.o highscore.c
+highscore.c: In function 'highscore_reset':
+highscore.c:36:2: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+  usleep(3000000);
+  ^
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   110 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+14:10:39 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+14:16:03 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling fsm.c to obj/default/fsm.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fsm.o fsm.c
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+14:16:06 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+14:55:25 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling fsm.c to obj/default/fsm.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fsm.o fsm.c
+Info: Compiling game.c to obj/default/game.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/game.o game.c
+game.c: In function 'game_isCorrectInput':
+game.c:52:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c:59:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c:63:17: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+   return (input == correct_sequence[user_sequence_len-1]);
+                 ^
+game.c:49:8: warning: variable 'isCorrect' set but not used [-Wunused-but-set-variable]
+   bool isCorrect = false;
+        ^
+game.c: In function 'game_displayCorrectSequence':
+game.c:80:7: warning: enumeration value 'UP' not handled in switch [-Wswitch]
+       switch (task) {
+       ^
+game.c:80:7: warning: enumeration value 'DOWN' not handled in switch [-Wswitch]
+game.c:80:7: warning: enumeration value 'LEFT' not handled in switch [-Wswitch]
+game.c:80:7: warning: enumeration value 'RIGHT' not handled in switch [-Wswitch]
+game.c:80:7: warning: enumeration value 'CLAP' not handled in switch [-Wswitch]
+game.c:96:7: warning: enumeration value 'CLAP' not handled in switch [-Wswitch]
+       switch (task) {
+       ^
+Info: Compiling highscore.c to obj/default/highscore.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/highscore.o highscore.c
+highscore.c: In function 'highscore_reset':
+highscore.c:36:2: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+  usleep(3000000);
+  ^
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 83 KBytes program size (code + initialized data).
+Info:                   109 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+14:55:28 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+15:01:02 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling fsm.c to obj/default/fsm.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fsm.o fsm.c
+Info: Compiling game.c to obj/default/game.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/game.o game.c
+game.c: In function 'game_isCorrectInput':
+game.c:52:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c:59:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c:63:17: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+   return (input == correct_sequence[user_sequence_len-1]);
+                 ^
+game.c:49:8: warning: variable 'isCorrect' set but not used [-Wunused-but-set-variable]
+   bool isCorrect = false;
+        ^
+game.c: In function 'game_displayCorrectSequence':
+game.c:81:7: warning: enumeration value 'UP' not handled in switch [-Wswitch]
+       switch (task) {
+       ^
+game.c:81:7: warning: enumeration value 'DOWN' not handled in switch [-Wswitch]
+game.c:81:7: warning: enumeration value 'LEFT' not handled in switch [-Wswitch]
+game.c:81:7: warning: enumeration value 'RIGHT' not handled in switch [-Wswitch]
+game.c:81:7: warning: enumeration value 'CLAP' not handled in switch [-Wswitch]
+game.c:97:7: warning: enumeration value 'CLAP' not handled in switch [-Wswitch]
+       switch (task) {
+       ^
+Info: Compiling highscore.c to obj/default/highscore.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/highscore.o highscore.c
+highscore.c: In function 'highscore_reset':
+highscore.c:36:2: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+  usleep(3000000);
+  ^
+Info: Compiling lcd.c to obj/default/lcd.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd.o lcd.c
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 83 KBytes program size (code + initialized data).
+Info:                   108 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+15:01:06 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+15:01:59 **** Build of configuration Nios II for project memory_game ****
 make all 
 Info: Building ../memory_game_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
 [BSP build complete]
 Info: Compiling menu.c to obj/default/menu.o
 nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
-menu.c: In function 'menu_about':
-menu.c:65:13: warning: implicit declaration of function 'game_getUserInput' [-Wimplicit-function-declaration]
-     input = game_getUserInput();
-             ^
 Info: Linking memory_game.elf
-nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
 nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
-Info: (memory_game.elf) 82 KBytes program size (code + initialized data).
-Info:                   109 KBytes free for stack + heap.
+Info: (memory_game.elf) 83 KBytes program size (code + initialized data).
+Info:                   108 KBytes free for stack + heap.
 Info: Creating memory_game.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
 [memory_game build complete]
-11:05:58 **** Incremental Build of configuration Nios II for project memory_game ****
+15:02:02 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+15:03:05 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 83 KBytes program size (code + initialized data).
+Info:                   108 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+15:03:08 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+15:05:31 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling game.c to obj/default/game.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/game.o game.c
+game.c: In function 'game_isCorrectInput':
+game.c:52:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c:59:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c:63:17: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+   return (input == correct_sequence[user_sequence_len-1]);
+                 ^
+game.c:49:8: warning: variable 'isCorrect' set but not used [-Wunused-but-set-variable]
+   bool isCorrect = false;
+        ^
+game.c: In function 'game_displayCorrectSequence':
+game.c:82:7: warning: enumeration value 'UP' not handled in switch [-Wswitch]
+       switch (task) {
+       ^
+game.c:82:7: warning: enumeration value 'DOWN' not handled in switch [-Wswitch]
+game.c:82:7: warning: enumeration value 'LEFT' not handled in switch [-Wswitch]
+game.c:82:7: warning: enumeration value 'RIGHT' not handled in switch [-Wswitch]
+game.c:82:7: warning: enumeration value 'CLAP' not handled in switch [-Wswitch]
+game.c:97:7: warning: enumeration value 'CLAP' not handled in switch [-Wswitch]
+       switch (task) {
+       ^
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 83 KBytes program size (code + initialized data).
+Info:                   108 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+15:05:34 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+15:06:22 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling game.c to obj/default/game.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/game.o game.c
+game.c: In function 'game_isCorrectInput':
+game.c:52:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c:59:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c:63:17: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+   return (input == correct_sequence[user_sequence_len-1]);
+                 ^
+game.c:49:8: warning: variable 'isCorrect' set but not used [-Wunused-but-set-variable]
+   bool isCorrect = false;
+        ^
+game.c: In function 'game_displayCorrectSequence':
+game.c:82:7: warning: enumeration value 'UP' not handled in switch [-Wswitch]
+       switch (task) {
+       ^
+game.c:82:7: warning: enumeration value 'DOWN' not handled in switch [-Wswitch]
+game.c:82:7: warning: enumeration value 'LEFT' not handled in switch [-Wswitch]
+game.c:82:7: warning: enumeration value 'RIGHT' not handled in switch [-Wswitch]
+game.c:82:7: warning: enumeration value 'CLAP' not handled in switch [-Wswitch]
+game.c:97:7: warning: enumeration value 'CLAP' not handled in switch [-Wswitch]
+       switch (task) {
+       ^
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 83 KBytes program size (code + initialized data).
+Info:                   108 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+15:06:24 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+15:07:09 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling game.c to obj/default/game.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/game.o game.c
+game.c: In function 'game_isCorrectInput':
+game.c:48:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c:55:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c: In function 'game_displayCorrectSequence':
+game.c:78:7: warning: enumeration value 'UP' not handled in switch [-Wswitch]
+       switch (task) {
+       ^
+game.c:78:7: warning: enumeration value 'DOWN' not handled in switch [-Wswitch]
+game.c:78:7: warning: enumeration value 'LEFT' not handled in switch [-Wswitch]
+game.c:78:7: warning: enumeration value 'RIGHT' not handled in switch [-Wswitch]
+game.c:78:7: warning: enumeration value 'CLAP' not handled in switch [-Wswitch]
+game.c:93:7: warning: enumeration value 'CLAP' not handled in switch [-Wswitch]
+       switch (task) {
+       ^
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 83 KBytes program size (code + initialized data).
+Info:                   108 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+15:07:12 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+15:08:55 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+15:08:57 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+15:40:50 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling fsm.c to obj/default/fsm.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fsm.o fsm.c
+Info: Compiling game.c to obj/default/game.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/game.o game.c
+game.c:17:9: error: initializer element is not constant
+ int l = i;
+         ^
+game.c: In function 'game_isCorrectInput':
+game.c:57:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c:64:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c: In function 'game_displayCorrectSequence':
+game.c:87:7: warning: enumeration value 'UP' not handled in switch [-Wswitch]
+       switch (task) {
+       ^
+game.c:87:7: warning: enumeration value 'DOWN' not handled in switch [-Wswitch]
+game.c:87:7: warning: enumeration value 'LEFT' not handled in switch [-Wswitch]
+game.c:87:7: warning: enumeration value 'RIGHT' not handled in switch [-Wswitch]
+game.c:87:7: warning: enumeration value 'CLAP' not handled in switch [-Wswitch]
+game.c:102:7: warning: enumeration value 'CLAP' not handled in switch [-Wswitch]
+       switch (task) {
+       ^
+make: *** [obj/default/game.o] Error 1
+15:40:51 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling game.c to obj/default/game.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/game.o game.c
+game.c:17:9: error: initializer element is not constant
+ int l = i;
+         ^
+game.c: In function 'game_isCorrectInput':
+game.c:57:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c:64:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c: In function 'game_displayCorrectSequence':
+game.c:87:7: warning: enumeration value 'UP' not handled in switch [-Wswitch]
+       switch (task) {
+       ^
+game.c:87:7: warning: enumeration value 'DOWN' not handled in switch [-Wswitch]
+game.c:87:7: warning: enumeration value 'LEFT' not handled in switch [-Wswitch]
+game.c:87:7: warning: enumeration value 'RIGHT' not handled in switch [-Wswitch]
+game.c:87:7: warning: enumeration value 'CLAP' not handled in switch [-Wswitch]
+game.c:102:7: warning: enumeration value 'CLAP' not handled in switch [-Wswitch]
+       switch (task) {
+       ^
+make: *** [obj/default/game.o] Error 1
+15:42:19 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling game.c to obj/default/game.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/game.o game.c
+game.c: In function 'game_isCorrectInput':
+game.c:53:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c:60:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c: In function 'game_displayCorrectSequence':
+game.c:100:7: warning: enumeration value 'CLAP' not handled in switch [-Wswitch]
+       switch (task) {
+       ^
+Info: Compiling highscore.c to obj/default/highscore.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/highscore.o highscore.c
+highscore.c: In function 'highscore_reset':
+highscore.c:36:2: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+  usleep(3000000);
+  ^
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 83 KBytes program size (code + initialized data).
+Info:                   108 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+15:42:24 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+15:42:44 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+15:42:45 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+16:00:22 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling fsm.c to obj/default/fsm.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fsm.o fsm.c
+Info: Compiling game.c to obj/default/game.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/game.o game.c
+game.c: In function 'game_isCorrectInput':
+game.c:53:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c:60:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c: In function 'game_displayCorrectSequence':
+game.c:100:7: warning: enumeration value 'CLAP' not handled in switch [-Wswitch]
+       switch (task) {
+       ^
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:28:5: warning: implicit declaration of function 'game_set_difficulty' [-Wimplicit-function-declaration]
+     game_set_difficulty(hard);
+     ^
+main.c:28:25: error: 'hard' undeclared (first use in this function)
+     game_set_difficulty(hard);
+                         ^
+main.c:28:25: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [obj/default/main.o] Error 1
+16:00:24 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:28:5: warning: implicit declaration of function 'game_set_difficulty' [-Wimplicit-function-declaration]
+     game_set_difficulty(hard);
+     ^
+main.c:28:25: error: 'hard' undeclared (first use in this function)
+     game_set_difficulty(hard);
+                         ^
+main.c:28:25: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [obj/default/main.o] Error 1
+16:01:39 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling fsm.c to obj/default/fsm.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fsm.o fsm.c
+Info: Compiling game.c to obj/default/game.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/game.o game.c
+game.c: In function 'game_isCorrectInput':
+game.c:53:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c:60:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c: In function 'game_displayCorrectSequence':
+game.c:100:7: warning: enumeration value 'CLAP' not handled in switch [-Wswitch]
+       switch (task) {
+       ^
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+menu.c:7:0: warning: "ITEM_CNT_ABOUT_PAGE" redefined
+ #define ITEM_CNT_ABOUT_PAGE 2
+ ^
+menu.c:6:0: note: this is the location of the previous definition
+ #define ITEM_CNT_ABOUT_PAGE 7
+ ^
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 83 KBytes program size (code + initialized data).
+Info:                   108 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+16:01:44 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+16:05:30 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling game.c to obj/default/game.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/game.o game.c
+game.c: In function 'game_isCorrectInput':
+game.c:53:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c:60:15: warning: comparison between 'USERINPUT {aka enum <anonymous>}' and 'TASK {aka enum <anonymous>}' [-Wenum-compare]
+     if (input == correct_sequence[user_sequence_len-1]) {
+               ^
+game.c: In function 'game_displayCorrectSequence':
+game.c:100:7: warning: enumeration value 'CLAP' not handled in switch [-Wswitch]
+       switch (task) {
+       ^
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+menu.c:7:0: warning: "ITEM_CNT_ABOUT_PAGE" redefined
+ #define ITEM_CNT_ABOUT_PAGE 2
+ ^
+menu.c:6:0: note: this is the location of the previous definition
+ #define ITEM_CNT_ABOUT_PAGE 7
+ ^
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 83 KBytes program size (code + initialized data).
+Info:                   108 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+16:05:33 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+16:07:01 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+menu.c:7:0: warning: "ITEM_CNT_ABOUT_PAGE" redefined
+ #define ITEM_CNT_ABOUT_PAGE 2
+ ^
+menu.c:6:0: note: this is the location of the previous definition
+ #define ITEM_CNT_ABOUT_PAGE 7
+ ^
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 83 KBytes program size (code + initialized data).
+Info:                   108 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+16:07:04 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+16:10:43 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+menu.c:7:0: warning: "ITEM_CNT_ABOUT_PAGE" redefined
+ #define ITEM_CNT_ABOUT_PAGE 2
+ ^
+menu.c:6:0: note: this is the location of the previous definition
+ #define ITEM_CNT_ABOUT_PAGE 7
+ ^
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 83 KBytes program size (code + initialized data).
+Info:                   108 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+16:10:46 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+16:12:13 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+menu.c:7:0: warning: "ITEM_CNT_ABOUT_PAGE" redefined
+ #define ITEM_CNT_ABOUT_PAGE 2
+ ^
+menu.c:6:0: note: this is the location of the previous definition
+ #define ITEM_CNT_ABOUT_PAGE 7
+ ^
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 83 KBytes program size (code + initialized data).
+Info:                   108 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+16:12:16 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+16:13:12 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+menu.c:7:0: warning: "ITEM_CNT_ABOUT_PAGE" redefined
+ #define ITEM_CNT_ABOUT_PAGE 2
+ ^
+menu.c:6:0: note: this is the location of the previous definition
+ #define ITEM_CNT_ABOUT_PAGE 7
+ ^
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 83 KBytes program size (code + initialized data).
+Info:                   108 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+16:13:15 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+[memory_game build complete]
+16:14:42 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+menu.c:7:0: warning: "ITEM_CNT_ABOUT_PAGE" redefined
+ #define ITEM_CNT_ABOUT_PAGE 2
+ ^
+menu.c:6:0: note: this is the location of the previous definition
+ #define ITEM_CNT_ABOUT_PAGE 7
+ ^
+menu.c: In function 'menu_change_difficulty':
+menu.c:94:36: error: expected identifier before '(' token
+   while (input != BTN_RED_BACK) && (input != BTN_GREEN_ENTER) {
+                                    ^
+make: *** [obj/default/menu.o] Error 1
+16:14:44 **** Incremental Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+menu.c:7:0: warning: "ITEM_CNT_ABOUT_PAGE" redefined
+ #define ITEM_CNT_ABOUT_PAGE 2
+ ^
+menu.c:6:0: note: this is the location of the previous definition
+ #define ITEM_CNT_ABOUT_PAGE 7
+ ^
+menu.c: In function 'menu_change_difficulty':
+menu.c:94:36: error: expected identifier before '(' token
+   while (input != BTN_RED_BACK) && (input != BTN_GREEN_ENTER) {
+                                    ^
+make: *** [obj/default/menu.o] Error 1
+16:15:00 **** Build of configuration Nios II for project memory_game ****
+make all 
+Info: Building ../memory_game_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/
+[BSP build complete]
+Info: Compiling menu.c to obj/default/menu.o
+nios2-elf-gcc -xc -MP -MMD -c -I../memory_game_bsp//HAL/inc -I../memory_game_bsp/ -I../memory_game_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/menu.o menu.c
+menu.c:7:0: warning: "ITEM_CNT_ABOUT_PAGE" redefined
+ #define ITEM_CNT_ABOUT_PAGE 2
+ ^
+menu.c:6:0: note: this is the location of the previous definition
+ #define ITEM_CNT_ABOUT_PAGE 7
+ ^
+Info: Linking memory_game.elf
+nios2-elf-g++  -T'../memory_game_bsp//linker.x' -msys-crt0='../memory_game_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../memory_game_bsp/   -Wl,-Map=memory_game.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o memory_game.elf obj/default/btnLed.o obj/default/fsm.o obj/default/game.o obj/default/highscore.o obj/default/lcd.o obj/default/main.o obj/default/menu.o -lm -msys-lib=m
+nios2-elf-insert memory_game.elf --thread_model hal --cpu_name cpu_lab5 --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE2_115_SOPC --quartus_project_dir "C:/Lab5" --jdi C:/Lab5/software/memory_game_bsp/../../Ver2.jdi --sopcinfo C:/Lab5/software/memory_game_bsp/../../DE2_115_SOPC.sopcinfo
+Info: (memory_game.elf) 83 KBytes program size (code + initialized data).
+Info:                   108 KBytes free for stack + heap.
+Info: Creating memory_game.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memory_game.elf >memory_game.objdump
+[memory_game build complete]
+16:15:04 **** Incremental Build of configuration Nios II for project memory_game ****
 make all 
 Info: Building ../memory_game_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../memory_game_bsp/

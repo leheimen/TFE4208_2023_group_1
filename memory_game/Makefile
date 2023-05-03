@@ -148,6 +148,7 @@ C_SRCS += game.c
 C_SRCS += fsm.c
 C_SRCS += menu.c
 C_SRCS += highscore.c
+C_SRCS += lcd.c
 CXX_SRCS :=
 ASM_SRCS :=
 

@@ -4,8 +4,10 @@
 #define ITEM_CNT_HIGHSCORES_PAGE 5
 #define ITEM_CNT_SETTINGS_PAGE 3
 #define ITEM_CNT_ABOUT_PAGE 7
+#define ITEM_CNT_ABOUT_PAGE 2
 
 void menu_about();
+void menu_change_difficulty();
 
 page_item main_page_items[] = {
    {"Play game",  NULL, MAIN_MENU, PLAY},
@@ -22,9 +24,9 @@ page_item highscores_page_items[] = {
 };
 
 page_item settings_page_items[] = {
-   {"Difficulty",      NULL,            MAIN_MENU, SETTINGS},
-   {"Reset highscore", highscore_reset, MAIN_MENU, SETTINGS},
-   {"About",           menu_about,      MAIN_MENU, SETTINGS}
+   {"Difficulty",      menu_change_difficulty, MAIN_MENU, SETTINGS},
+   {"Reset highscore", highscore_reset,        MAIN_MENU, SETTINGS},
+   {"About",           menu_about,             MAIN_MENU, SETTINGS}
 };
 
 page_item about_page_items[] = {
@@ -37,15 +39,26 @@ page_item about_page_items[] = {
   {"  ;o}  ",          NULL, SETTINGS, SETTINGS},
 };
 
+page_item difficulty_page_items[] = {
+  {"Easy", game_set_easy_difficulty, SETTINGS, SETTINGS},
+  {"Hard", game_set_hard_difficulty, SETTINGS, SETTINGS},
+};
+
 page main_page       = {ITEM_CNT_MAIN_PAGE,       main_page_items,       0, 1};
 page highscores_page = {ITEM_CNT_HIGHSCORES_PAGE, highscores_page_items, 0, 1};
 page settings_page   = {ITEM_CNT_SETTINGS_PAGE,   settings_page_items,   0, 1};
 page about_page      = {ITEM_CNT_ABOUT_PAGE,      about_page_items,      0, 1};
+page difficulty_page = {ITEM_CNT_ABOUT_PAGE,      difficulty_page_items, 0, 1};
 
 void menu_displayPage(page p) {
-	LCD_PRINTF(lcd, "%c%s\n", ESC, ESC_CLEAR_ALL);
-	LCD_PRINTF(lcd, "%c%s>%s\n", ESC, ESC_ROW1_COL1, p.items[p.lcd_line0_index].name);
-	LCD_PRINTF(lcd, " %s\n", p.items[p.lcd_line1_index].name);
+  char str1[] = ">";
+  char str_with_pointer[20];
+   
+  strcpy(str_with_pointer, str1);   // copy the first string into the result array
+  strcat(str_with_pointer, p.items[p.lcd_line0_index].name);   // concatenate the second string to the result array
+  lcd_clear();
+  lcd_print(1, 1, str_with_pointer);
+  lcd_print(2, 2, p.items[p.lcd_line1_index].name);
 }
 
 void menu_scrollPage(page *p, USERINPUT up_down) {
@@ -74,5 +87,29 @@ void menu_about() {
         break;
     }
   }
-  
+}
+
+void menu_change_difficulty() {
+  USERINPUT input = 0;
+  while (input != BTN_RED_BACK && input != BTN_GREEN_ENTER) {
+    menu_displayPage(difficulty_page);
+    input = game_getUserInput();
+    switch(input) {
+      case BTN_WHITE_UP:
+        menu_scrollPage(&difficulty_page, BTN_WHITE_UP);
+        break;
+      case BTN_YELLOW_DOWN:
+        menu_scrollPage(&difficulty_page, BTN_YELLOW_DOWN);
+        break;
+      case BTN_GREEN_ENTER:
+        difficulty_page.items[difficulty_page.lcd_line0_index].function();
+        lcd_print(1,1, "New difficulty");
+        lcd_print(2,1, "is set.");
+        usleep(2000000);
+        break;
+      default:
+        break;
+    }
+  }
+  printf("Out of while loop\n");
 }

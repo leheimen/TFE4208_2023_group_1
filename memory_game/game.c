@@ -1,9 +1,16 @@
 #include "game.h"
 
 
-static int correct_sequence[100]; // Assume that user will not manage >100 tasks
+static TASK correct_sequence[100]; // Assume that user will not manage >100 tasks
 static int correct_sequence_len;
 static int user_sequence_len;
+//static int difficulty = EASY;
+//static int number_of_tasks = TASK_CNT_EASY;
+
+difficulty_t easy = {EASY, TASK_CNT_EASY};
+difficulty_t hard = {HARD, TASK_CNT_HARD};
+
+difficulty_t difficulty;
 
 USERINPUT game_getUserInput() {
   btnLed_reset_edge_capture();
@@ -41,48 +48,93 @@ static bool game_isEndOfSequence() {
 }
 
 static bool game_isCorrectInput(USERINPUT input) {
-  return (input == correct_sequence[user_sequence_len-1]);
+  bool isCorrect = false;
+  if (difficulty.difficulty == HARD) {
+    if (input == correct_sequence[user_sequence_len-1]) {
+      isCorrect = true;
+    } 
+    if ((input + 4) == correct_sequence[user_sequence_len-1]) {
+      isCorrect = true;
+    }
+  } else if (difficulty.difficulty == EASY) {
+    if (input == correct_sequence[user_sequence_len-1]) {
+      isCorrect = true;
+    }
+  }
+  return isCorrect;
 }
 
 static void game_appendNewTask() {
   correct_sequence_len++;
-  int task = rand() % 4 + 1;
+  TASK task = rand() % difficulty.number_of_tasks + 1;
   printf("Appending new task %d\n", task);
   correct_sequence[correct_sequence_len-1] = task;
 }
 
 static void game_displayCorrectSequence() {
-  LCD_PRINTF(lcd, "%c%s\n", ESC, ESC_CLEAR_ALL);
-  LCD_PRINTF(lcd, "%c%sRemember the\n", ESC, ESC_ROW1_COL1);
-  LCD_PRINTF(lcd, "sequence:\n");
+  lcd_clear();
+  lcd_print(1,1, "Remember the");
+  lcd_print(2,1, "sequence: ");
+  usleep(1000000);
+  lcd_clear();
   for (int i = 0; i < correct_sequence_len; i++) {
-     int task = correct_sequence[i];
-     usleep(500000);
-     switch (task) {
-      case BTN_WHITE_UP:
-        btnLed_set_led(6);
-    	break;
-      case BTN_YELLOW_DOWN:
-        btnLed_set_led(4);
+    TASK task = correct_sequence[i];
+    if (difficulty.difficulty == EASY) {
+      switch (task) {
+        case WHITE:
+          btnLed_set_led(6);
+          break;
+        case YELLOW:
+          btnLed_set_led(4);
+          break;
+        case RED:
+          btnLed_set_led(2);
+          break;
+        case GREEN:
+          btnLed_set_led(0);
+          break;
+        default:
+          break;
+      }
+    } else if (difficulty.difficulty == HARD) {
+      switch (task) {
+        case WHITE:
+          lcd_print(1,1, "White");
+          break;
+        case YELLOW:
+          lcd_print(1,1, "Yellow");
+          break;
+        case RED:
+          lcd_print(1,1, "Red");
+          break;
+        case GREEN:
+          lcd_print(1,1, "Green");
+          break;
+        case UP:
+          lcd_print(1,1, "Up");
         break;
-      case BTN_RED_BACK:
-        btnLed_set_led(2);
-        break;
-      case BTN_GREEN_ENTER:
-        btnLed_set_led(0);
-        break;
-     }
-     usleep(500000);
-     btnLed_clear_all_leds();
+        case DOWN:
+          lcd_print(1,1, "Down");
+          break;
+        case LEFT:
+          lcd_print(1,1, "Left");
+          break;
+        case RIGHT:
+          lcd_print(1,1, "Right");
+          break;
+      }
+      usleep(500000);
+    }
+    usleep(500000);
+    btnLed_clear_all_leds();
   }
-  LCD_PRINTF(lcd, "%c%s\n", ESC, ESC_CLEAR_ALL);
-  LCD_PRINTF(lcd, "%c%sEnter the\n", ESC, ESC_ROW1_COL1);
-  LCD_PRINTF(lcd, "sequence:\n");
+  lcd_print(1,1, "Enter the");
+  lcd_print(2,1, "sequence:");
 }
 
 static void game_displayGameStart() {
-	LCD_PRINTF(lcd, "%c%s\n", ESC, ESC_CLEAR_ALL);
-	LCD_PRINTF(lcd, "%c%s**Memory Game**\n", ESC, ESC_ROW1_COL1);
+  lcd_clear();
+  lcd_print(1,1, "**Memory Game**");
     for (int i = 0; i < 5; i++) {
       for (int j = 0; j < 8; j++) {
         btnLed_clear_all_leds();
@@ -96,14 +148,13 @@ static void game_displayGameStart() {
       }
   }
   btnLed_clear_all_leds();
-  LCD_PRINTF(lcd, "%c%s\n", ESC, ESC_CLEAR_ALL);
-  LCD_PRINTF(lcd, "%c%sPay attention!\n", ESC, ESC_ROW1_COL1);
+  lcd_print(1,1, "Pay attention!");
   usleep(1000000);
 }
 
 static void game_displayGameOver(int new_highscore_entry) {
-  LCD_PRINTF(lcd, "%c%s\n", ESC, ESC_CLEAR_ALL);
-  LCD_PRINTF(lcd, "%c%sGame Over :(\n", ESC, ESC_ROW1_COL1);
+  lcd_clear();
+  lcd_print(1,1, "Game Over :(");
   for (int i = 0; i < 6; i++) {
 	  btnLed_set_all_red_leds();
 	  usleep(200000);
@@ -150,4 +201,12 @@ void game_play() {
     }
   }
   game_over();
+}
+
+void game_set_easy_difficulty() {
+  difficulty = easy;
+}
+
+void game_set_hard_difficulty() {
+  difficulty = hard;
 }

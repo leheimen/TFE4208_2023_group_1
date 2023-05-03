@@ -12,7 +12,7 @@
 /* Clear */
 #define ESC 27
 /* Position cursor at row 1, column 1 of LCD. */
-#define ESC_CLEAR "K"
+#define ESC_CLEAR "[K"
 /* Clear whole screen. */
 #define ESC_CLEAR_ALL "[2J"
 /* Position cursor at row1, column 5 of LCD. */
@@ -31,5 +31,8 @@
 #define ESC_TOP_LEFT "[1;0H"
 
 FILE *lcd;
+
+void lcd_print(int row, int col, char str[]);
+void lcd_clear();
 
 #endif /* LCD_H */

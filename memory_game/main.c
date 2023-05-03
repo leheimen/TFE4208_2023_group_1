@@ -15,8 +15,7 @@
 
 int main(void) {
     srand ( time(NULL) );
-
-
+    
 	// Inititalize the lcd
 	lcd = LCD_OPEN();
 	if(lcd == NULL) {
@@ -25,6 +24,8 @@ int main(void) {
 
     // Initialize the button pio.
     btnLed_init();
+
+    game_set_hard_difficulty();
 
     while(1) {
     	fsm();

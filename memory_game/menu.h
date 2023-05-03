@@ -2,9 +2,11 @@
 #define MENU_H
 
 #include <stddef.h>
+#include <string.h>
 #include "lcd.h"
 #include "types.h"
 #include "highscore.h"
+#include "game.h"
 
 extern page_item main_page_items[];
 extern page_item highscores_page_items[];

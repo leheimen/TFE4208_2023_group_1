@@ -16,9 +16,12 @@
 #include "highscore.h"
 #include "game.h"
 
-
 USERINPUT game_getUserInput();
 
 void game_play();
+
+void game_set_easy_difficulty();
+
+void game_set_hard_difficulty();
 
 #endif /* GAME_H */
